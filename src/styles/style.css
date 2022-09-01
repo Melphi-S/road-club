@@ -1,0 +1,180 @@
+@import '../vendors/normalize.css';
+@import '../vendors/fonts/Inter/inter.css';
+.body {
+  color: #151515;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: flex-end;
+  padding: 28px 120px;
+  box-sizing: border-box;
+  z-index: 998;
+  background-color: #f4f4f4;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 34px;
+  flex-wrap: nowrap;
+}
+.header__menu-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.lead {
+  display: grid;
+  grid-template-columns: minmax(-webkit-min-content, 1fr) 2fr;
+  grid-template-columns: minmax(min-content, 1fr) 2fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  background-image: url("../../../vendors/images/lead-background.jpg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 0 79px 120px;
+  margin-top: 74px;
+  grid-template-areas: "title ..." "subtitle ..." "button bike-image" "bike-name bike-image";
+  box-sizing: content-box;
+}
+.lead__title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  grid-area: title;
+  margin: 0;
+  max-width: 460px;
+}
+.lead__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  grid-area: subtitle;
+  margin: 0;
+  padding-top: 50px;
+  max-width: 460px;
+}
+.lead__button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 16px 10px;
+  margin-top: 50px;
+  background-color: #24B47E;
+  color: #ffffff;
+  border-radius: 4px;
+  grid-area: button;
+  min-width: 160px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: center;
+}
+.lead__bike-name {
+  display: block;
+  position: relative;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  grid-area: bike-name;
+  margin: 167px 0 130px;
+}
+.lead__bike-name::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 30px);
+  content: "";
+  width: 132px;
+  height: 2px;
+  background-color: #D7D4D4;
+}
+.lead__bike-image {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 425px;
+  width: 340px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 20px 50px;
+  border-radius: 50px;
+  grid-area: bike-image;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  background-color: #f4f4f4;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  padding-left: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.intro__quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+.intro__quote-text {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  max-width: 470px;
+}
+.intro__author-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 6px;
+}
+.intro__author-profession {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
+}/*# sourceMappingURL=style.css.map */

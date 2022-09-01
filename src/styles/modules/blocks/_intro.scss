@@ -1,0 +1,41 @@
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding-left: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    &__quote-text {
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: -0.5px;
+        max-width: 470px;
+    }
+
+    &__author-name {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        padding-bottom: 6px;
+    }
+
+    &__author-profession {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #222222;
+        opacity: 0.7;
+    }
+    
+}
