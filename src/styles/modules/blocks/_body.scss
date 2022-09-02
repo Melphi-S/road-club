@@ -1,8 +1,10 @@
 .body {
-    color: $lightThemeText;
-    background-color: $lightThemeBackground;
+    color: $lightThemeColor;
+    background-color: $lightThemeBackgroundColor;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

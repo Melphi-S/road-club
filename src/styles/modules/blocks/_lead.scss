@@ -1,18 +1,17 @@
 .lead {
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 2fr;
-    column-gap: 50px;
-    background-image: url('../../../vendors/images/lead-background.jpg');
+    column-gap: 105px;
+    background-image: url($imgPath + 'lead-background.jpg');
     background-position: right bottom;
     background-repeat: no-repeat;
     position: relative;
-    padding: 80px 0 79px 120px;
+    padding: 83px 0 79px;
     margin-top: 74px;
-    grid-template-areas: "title ..."
-                         "subtitle ..."
+    grid-template-areas: "title bike-image"
+                         "subtitle bike-image"
                          "button bike-image"
                          "bike-name bike-image";
-    box-sizing: content-box;
 
     &__title {
         font-weight: 700;
@@ -21,7 +20,7 @@
         letter-spacing: -0.5px;
         grid-area: title;
         margin: 0;
-        max-width: 460px;
+        max-width: $textWidthLimit;
     }
 
     &__subtitle {
@@ -30,8 +29,8 @@
         line-height: 28px;
         grid-area: subtitle;
         margin: 0;
-        padding-top: 50px;
-        max-width: 460px;
+        padding-top: 43px;
+        max-width: $textWidthLimit;
     }
 
     &__button {
@@ -40,7 +39,7 @@
         line-height: 18px;
         letter-spacing: 1px;
         padding: 16px 10px;
-        margin-top: 50px;
+        margin-top: 54px;
         background-color: #24B47E;
         color: #ffffff;
         border-radius: 4px;
@@ -60,7 +59,7 @@
         font-size: 18px;
         line-height: 18px;
         grid-area: bike-name;
-        margin: 167px 0 130px;
+        margin: 169px 0 128px;
         &::after {
             display: block;
             position: absolute;
@@ -75,12 +74,12 @@
 
     &__bike-image {
         position: sticky;
-        top: 425px;
+        top: 420px;
         width: 340px;
         height: 260px;
         object-fit: cover;
         padding: 20px 50px;
-        border-radius: 50px;
+        border-radius: 20px;
         grid-area: bike-image;
         box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
         background-color: #f4f4f4;

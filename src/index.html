@@ -26,11 +26,11 @@
         </header>
         <main class="main">
             <section class="lead">
-                <h1 class="lead__title">Шоссе, ТТ и Грэвел</h1>
+                <h1 class="lead__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
                 <p class="lead__subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
                 <a href="#" class="lead__button link">Подробнее</a>
                 <p class="lead__bike-name">Cannondale Systemsix</p>
-                <img src="./vendors/images/Cannondale Systemsix Himod.jpg" alt="Велосипед Cannondale Systemsix." class="lead__bike-image">
+                <img src="./vendors/images/Cannondale Systemsix Himod.png" alt="Велосипед Cannondale Systemsix." class="lead__bike-image">
             </section>
             <section class="intro">
                 <img src="./vendors/images/intro-image.jpg" alt="Велосипедист на загородной дороге." class="intro__image">
@@ -42,11 +42,124 @@
                     </figcaption>
                 </figure>
             </section>
-            <section class="surfaces"></section>
-            <section class="bicycles"></section>
+            <section class="surfaces">
+                <div class="surfaces__slider-wrapper">
+                    <div class="surface surface_position_active" id="surface-highway">
+                        <h2 class="surface__title">Шоссе</h2>
+                        <p class="surface__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+                        <div class="surface__image-container">
+                            <img src="./vendors/images/highway.jpg" alt="Шоссе в горах." class="surface__image">
+                            <div class="surface__scheme-container">
+                                <img src="./vendors/images/scheme-highway.svg" alt="Схема горной дороги." class="surface__scheme">  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="surface surface_position_next" id="surface-gravel">
+                        <h2 class="surface__title">Грэвел</h2>
+                        <p class="surface__subtitle">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
+                        <div class="surface__image-container">
+                            <img src="./vendors/images/gravel.jpg" alt="Велосипедист на лесной дороге." class="surface__image">
+                            <div class="surface__scheme-container">
+                                <img src="./vendors/images/scheme-gravel.svg" alt="Схема гравийной дороги." class="surface__scheme">  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="surface" id="surface-tt">
+                        <h2 class="surface__title">ТТ</h2>
+                        <p class="surface__subtitle">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
+                        <div class="surface__image-container">
+                            <img src="./vendors/images/tt.jpg" alt="Шоссе на равнине." class="surface__image">
+                            <div class="surface__scheme-container">
+                                <img src="./vendors/images/scheme-tt.svg" alt="Схема равнинной дороги." class="surface__scheme">  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="surfaces__buttons-container">
+                    <button class="surfaces__button surfaces__button_type_previous"></button>
+                    <button class="surfaces__button surfaces__button_type_next"></button>
+                </div>
+            </section>
+            <section class="bikes">
+                <h2 class="bikes__title">Велосипеды</h2>
+                <div class="bikes__buttons-container">
+                    <button class="bikes__button" id="button-highway">Шоссе</button>
+                    <button class="bikes__button" id="button-gravel">Грэвел</button>
+                    <button class="bikes__button" id="button-tt">ТТ</button>
+                </div>
+                <ul class="bikes__container list">
+                    <li>
+                        <ul class="bikes__group bikes__group_active list">
+                            <li>
+                                <figure class="bike">
+                                    <img src="./vendors/images/Cervelo Caledonia-5.png" alt="Велосипед Cervelo Caledonia-5." class="bike__image">
+                                    <figcaption class="bike__name">Cervelo Caledonia-5</figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="./vendors/images/Cannondale Systemsix Himod.png" alt="Велосипед Cannondale Systemsix Himod." class="bike__image">
+                                    <figcaption class="bike__name">Cannondale Systemsix Himod</figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="./vendors/images/Trek Domane SL-7.png" alt="Велосипед Trek Domane SL-7." class="bike__image">
+                                    <figcaption class="bike__name">Trek Domane SL-7</figcaption>
+                                </figure> 
+                            </li>
+                        </ul>  
+                    </li>
+                    <li>
+                        <ul class="bikes__group list">
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                        </ul>  
+                    </li>
+                    <li>
+                        <ul class="bikes__group list">
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                            <li>
+                                <figure class="bike">
+                                    <img src="" alt="" class="bike__image">
+                                    <figcaption class="bike__name"></figcaption>
+                                </figure> 
+                            </li>
+                        </ul>  
+                    </li>
+                </ul>
+            </section>
             <section class="workouts"></section>
         </main>
         <footer class="footer"></footer>
     </div>
+    <script src="./pages/index.js"></script>
 </body>
 </html>

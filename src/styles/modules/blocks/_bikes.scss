@@ -1,0 +1,57 @@
+.bikes {
+    display: grid;
+    grid-template-areas: 'title buttons'
+                         'bikes bikes';
+    padding: 60px 120px 60px 0;
+    align-items: end;
+
+    &__title {
+        grid-area: title;
+        margin: 0;
+        max-width: $textWidthLimit;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+    }
+
+    &__buttons-container {
+        display: flex;
+        justify-content: space-between;
+        justify-self: end;
+        padding-bottom: 5px;
+        grid-area: buttons;
+        gap: 40px;
+    }
+
+    &__button {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $lightThemeColorPale;
+        opacity: $paleOpacity;
+        padding: 0;
+        border: 0;
+        height: min-content;
+        cursor: pointer;
+        background-color: transparent;
+        &_active {
+
+        }
+    }
+
+    &__container {
+        grid-area: bikes;
+        margin-top: 120px;
+    }
+
+    &__group {
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        &_active {
+            display: flex;
+        }
+    }
+}

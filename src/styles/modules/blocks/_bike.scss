@@ -1,0 +1,22 @@
+.bike {
+    margin: 0;
+    padding: 0;
+
+    &__image {
+        display: block;
+        width: 100%;
+        width: 340px;
+        border: 20px solid $lightThemeBackgroundColor;
+        border-radius: 20px;
+        aspect-ratio: 1 / 1;
+        box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 18px;
+        padding-left: 5px;
+    }
+}
