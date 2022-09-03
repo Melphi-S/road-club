@@ -1,13 +1,14 @@
 .bike {
     margin: 0;
     padding: 0;
+    cursor: pointer;
 
     &__image {
         display: block;
         width: 100%;
         width: 340px;
+        background-color: $lightThemeBackgroundColor;
         border: 20px solid $lightThemeBackgroundColor;
-        border-radius: 20px;
         aspect-ratio: 1 / 1;
         box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
     }

@@ -321,26 +321,30 @@
   grid-area: bikes;
   margin-top: 120px;
 }
-.bikes__group {
+.bikes__group-container {
   display: none;
+}
+.bikes__group-container_active {
+  display: block;
+}
+.bikes__group {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-}
-.bikes__group_active {
-  display: flex;
 }
 
 .bike {
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 .bike__image {
   display: block;
   width: 100%;
   width: 340px;
+  background-color: #f4f4f4;
   border: 20px solid #f4f4f4;
-  border-radius: 20px;
   aspect-ratio: 1/1;
   box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
 }

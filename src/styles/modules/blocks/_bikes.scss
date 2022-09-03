@@ -45,13 +45,17 @@
         margin-top: 120px;
     }
 
-    &__group {
+    &__group-container {
         display: none;
+        &_active {
+            display: block;
+        }
+    }
+
+    &__group {
+        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 30px;
-        &_active {
-            display: flex;
-        }
     }
 }
