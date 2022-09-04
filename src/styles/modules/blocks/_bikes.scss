@@ -36,7 +36,8 @@
         cursor: pointer;
         background-color: transparent;
         &_active {
-
+            color: $lightThemeColor;
+            opacity: 1;
         }
     }
 

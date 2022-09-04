@@ -1,0 +1,83 @@
+.footer {
+    padding: 82px 120px 60px 0;
+
+    &__email-form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: min-content;
+    }
+
+    &__email-label {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 229px;
+
+    }
+
+    &__email-input {
+        width: 360px;
+        height: 50px;
+        padding: 0;
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        border-radius: 4px;
+        background-color: $lightThemeBackgroundColor;
+        padding-right: 40px;
+        margin-top: 50px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 28px;
+            opacity: $paleOpacity;
+            padding-left: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__email-button {
+        height: min-content;
+        width: min-content;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 28px;
+        position: absolute;
+        bottom: 11px;
+        right: 22px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    &__bottom-line {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 85px;
+    }
+
+    &__copyright {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #cfcfcf;
+        margin: 0;
+        padding-top: 15px;
+    }
+
+    &__toggle-container {
+
+    }
+
+    &__logo {
+        display: none;
+    }
+}

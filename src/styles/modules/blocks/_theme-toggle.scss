@@ -1,0 +1,52 @@
+.theme-toggle {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        &_type {
+            &_light {
+                width: 28px;
+                height: 28px;
+                background-image: url($imgPath + 'sun-logo.svg');
+            }
+            &_dark {
+                width: 20px;
+                height: 20px;
+                background-image: url($imgPath + 'moon-logo.svg');
+            }
+        }
+    }
+
+    &__button {
+        display: none;
+
+        &:checked + .theme-toggle__button-label:before {
+            left: 22px;
+        }
+    }
+
+    &__button-label {
+        width: 44px;
+        height: 24px;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+        transition: .3s ease;
+        background-color: #ffffff;
+        margin: 0 22px;
+
+        &::before {
+            transition: .3s ease;
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: #24B47E;
+            left: 2px;
+            top: 2px;
+            border-radius: 100px;
+        }      
+    }
+}

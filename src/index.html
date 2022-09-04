@@ -19,7 +19,7 @@
                         <a href="#bikes" class="header__menu-item link">Велосипеды</a>                        
                     </li>
                     <li>
-                        <a href="#" class="header__menu-item link">Тренировки</a>        
+                        <a href="#workouts" class="header__menu-item link">Тренировки</a>        
                     </li>
                 </ul>
             </nav>
@@ -174,9 +174,35 @@
                     </li>
                 </ul>
             </section>
-            <section class="workouts"></section>
+            <section class="workouts" id="workouts">
+                <h2 class="workouts__title">Тренировки</h2>
+                <p class="workouts__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+                <div class="workouts__apps">
+                    <a href="https://www.strava.com" target="_blank" class="workouts__app-link link">Strava</a>
+                    <a href="https://www.komoot.com" target="_blank" class="workouts__app-link link">Komoot</a>
+                </div>
+                <img src="./vendors/images/workouts.jpg" alt="Поворот на узком шоссе." class="workouts__image">
+            </section>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <form class="footer__email-form">
+                <label for="email" class="footer__email-label">Подпишитесь на рассылку &mdash;</label>
+                <input type="email" class="footer__email-input" id="email" placeholder="Ваш e-mail">
+                <button type="submit" class="footer__email-button">ok</button>
+            </form>
+            <div class="footer__bottom-line">
+                <p class="footer__copyright">&copy;&nbsp;Road Club 2021</p>
+                <div class="footer__toggle-container">
+                    <div class="theme-toggle">
+                        <span class="theme-toggle__logo theme-toggle__logo_type_light"></span>
+                        <input class="theme-toggle__button" id="theme-toggle" type="checkbox"/>
+                        <label class="theme-toggle__button-label" for="theme-toggle"></label>
+                        <span class="theme-toggle__logo theme-toggle__logo_type_dark"></span>
+                    </div>
+                    <div class="footer__logo"></div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script type="module" src="./pages/index.js"></script>
 </body>

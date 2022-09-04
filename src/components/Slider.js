@@ -8,13 +8,13 @@ class Slider {
         this._visibleSlides = {};
     }
 
-    activateSlider(display) {
+    activateSlider() {
         let index = 0;
         for (let slide in this._visibleSlidesOptions) {
             this._visibleSlides[slide] = this._slides[index];
             index += 1;
         }
-        this._enableElements(display);
+        this._enableElements();
     }
 
     _toggleElements(slide) {
@@ -27,12 +27,12 @@ class Slider {
         }
     }
 
-    _enableElements(display) {
+    _enableElements() {
         for (let slide in this._visibleSlidesOptions) {
             this._visibleSlides[slide].classList.add(this._visibleSlidesOptions[slide].selector);
             if (this._togglingElementsSelectors) {
                 if (this._visibleSlidesOptions[slide].invisibleElements === false) {
-                    this._toggleElements(slide).forEach((element) => element.style.display = display)
+                    this._toggleElements(slide).forEach((element) => element.style.display = this._visibleSlidesOptions[slide].display)
                 }
             }
         }
@@ -88,7 +88,6 @@ class Slider {
     
         else {
             let index = this._slides.indexOf(this._slider.querySelector(`${this._sliderId}-${direction}`));
-            console.log(this._sliderId);
             let nextCircleIndex = 0;
             for (let slide in this._visibleSlides){
                 this._visibleSlides[slide] = this._slides[index];
@@ -103,10 +102,10 @@ class Slider {
         }
     }
 
-    moveSlides(direction, display) {
+    moveSlides(direction) {
         this._disableElements();
         this._setVisibleSlides(direction);
-        this._enableElements(display);
+        this._enableElements();
     }
 }
 
