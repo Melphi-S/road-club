@@ -19,25 +19,11 @@
     &__title {
         display: none;
         grid-area: title;
-        margin: 0;
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 60px;
-        letter-spacing: -0.5px;
-        max-width: $textWidthLimit;
     }
 
     &__subtitle {
         display: none;
         grid-area: subtitle;
-        margin: 0;
-        padding-top: 45px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        color: $lightThemeColorPale;
-        opacity: $paleOpacity;
-        max-width: $textWidthLimit;
     }
 
     &__image-container {

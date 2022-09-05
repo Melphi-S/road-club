@@ -24,13 +24,27 @@
         background-position: center;
         cursor: pointer;
 
+        &:hover {
+            opacity: $lightThemeHoverOpacityPale;
+        }
+
         &_type{
             &_previous {
-                background-image: url($imgPath + 'previous-button.svg');
                 margin-right: 20px;
             }
             &_next {
-                background-image: url($imgPath + 'next-button.svg');
+                transform: rotate(180deg);
+            }
+        }
+
+        &_theme {
+            &_light {
+                background-color: #ebebeb;
+                background-image: url($imgPath + 'arrow-button.svg');
+            }
+            &_dark {
+                background-color: #434343;
+                background-image: url($imgPath + 'arrow-button-for-dark.svg');
             }
         }
     }

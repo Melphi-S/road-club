@@ -14,23 +14,11 @@
                          "bike-name bike-image";
 
     &__title {
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 60px;
-        letter-spacing: -0.5px;
         grid-area: title;
-        margin: 0;
-        max-width: $textWidthLimit;
     }
 
     &__subtitle {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
         grid-area: subtitle;
-        margin: 0;
-        padding-top: 43px;
-        max-width: $textWidthLimit;
     }
 
     &__button {
@@ -42,12 +30,32 @@
         margin-top: 54px;
         background-color: #24B47E;
         color: #ffffff;
+        text-decoration: none;
         border-radius: 4px;
         grid-area: button;
         min-width: 160px;
         width: min-content;
         height: min-content;
         text-align: center;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #319E75;
+            border-radius: 4px;
+            transition: all .3s linear;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
     }
 
     &__bike-name {

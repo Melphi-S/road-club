@@ -8,7 +8,6 @@
     padding: 28px 120px 27px;
     box-sizing: border-box;
     z-index: 998;
-    background-color: $lightThemeBackgroundColor;
 
     &__menu {
         display: flex;
@@ -21,8 +20,5 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 18px;
-        &:hover {
-            opacity: $lightThemeHoverOpacity;
-        }
     }
 }

@@ -1,0 +1,28 @@
+.section {
+    &__title {
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        margin: 0;
+        max-width: $textWidthLimit;
+    }
+
+    &__subtitle {
+        margin: 0;
+        padding-top: 45px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        opacity: $paleOpacity;
+        max-width: $textWidthLimit;
+        &_theme {
+            &_light {
+                color: $lightThemeColorPale;
+            }
+            &_dark {
+                color: $darkThemeColorPale;
+            }
+        }
+    }
+}

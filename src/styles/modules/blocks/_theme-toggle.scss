@@ -2,19 +2,32 @@
     display: flex;
     align-items: center;
 
+    &_disabled {
+        display: none;
+    }
+
     &__logo {
         background-position: center;
         background-repeat: no-repeat;
-        &_type {
+        width: 28px;
+        height: 28px;
+        &:last-of-type {
+            width: 20px;
+            height: 20px;
+        }
+
+        &_theme {
             &_light {
-                width: 28px;
-                height: 28px;
                 background-image: url($imgPath + 'sun-logo.svg');
+                &:last-of-type {
+                    background-image: url($imgPath + 'moon-logo.svg');
+                }
             }
             &_dark {
-                width: 20px;
-                height: 20px;
-                background-image: url($imgPath + 'moon-logo.svg');
+                background-image: url($imgPath + 'sun-logo-for-dark.svg');
+                &:last-of-type {
+                    background-image: url($imgPath + 'moon-logo-for-dark.svg');
+                }
             }
         }
     }
@@ -36,6 +49,16 @@
         transition: .3s ease;
         background-color: #ffffff;
         margin: 0 22px;
+
+        &_theme {
+            &_light {
+                background-color: #ffffff;
+            }
+
+            &_dark {
+                background-color: #545454;
+            }
+        }
 
         &::before {
             transition: .3s ease;

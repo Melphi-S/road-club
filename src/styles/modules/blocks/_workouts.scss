@@ -8,24 +8,10 @@
     padding: 150px 120px 120px 0;
     
     &__title {
-        margin: 0;
-        max-width: $textWidthLimit;
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 60px;
-        letter-spacing: -0.5px;
         grid-area: title;
     }
 
     &__subtitle {
-        margin: 0;
-        padding-top: 50px;
-        max-width: $textWidthLimit;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        color: $lightThemeColorPale;
-        opacity: $paleOpacity;
         grid-area: subtitle;
     }
 
