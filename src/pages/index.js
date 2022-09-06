@@ -37,27 +37,55 @@ const highwayButton = document.querySelector("#button-highway");
 const gravelButton = document.querySelector("#button-gravel");
 const ttButton = document.querySelector("#button-tt");
 const surfaceButtons = [highwayButton, gravelButton, ttButton];
+const select = document.querySelector('.bikes__select');
 
 nextButton.addEventListener("mousedown", () => {
   surfacesSlider.moveSlides("next");
   bikesGroupSlider.moveSlides("next");
+  toggleButtonStyles();
+  changeOption();
 });
 prevButton.addEventListener("mousedown", () => {
   surfacesSlider.moveSlides("prev");
   bikesGroupSlider.moveSlides("prev");
+  toggleButtonStyles();
+  changeOption();
 });
 highwayButton.addEventListener("mousedown", () => {
   surfacesSlider.moveSlides("highway");
   bikesGroupSlider.moveSlides("highway");
+  toggleButtonStyles();
 });
 gravelButton.addEventListener("mousedown", () => {
   surfacesSlider.moveSlides("gravel");
   bikesGroupSlider.moveSlides("gravel");
+  toggleButtonStyles();
 });
 ttButton.addEventListener("mousedown", () => {
   surfacesSlider.moveSlides("tt", "flex");
   bikesGroupSlider.moveSlides("tt");
+  toggleButtonStyles();
 });
+
+const tabletWidth = 768;
+
+function changeOption() {
+  const activeSurface = document.querySelector('.surface_position_active').getAttribute('id').split('-')[1];
+  select.value = activeSurface;
+}
+
+function activateSelect() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= tabletWidth) {
+    select.addEventListener('change', function() {
+      const surface = this.value;
+      surfacesSlider.moveSlides(surface);
+      bikesGroupSlider.moveSlides(surface);
+    })
+  }
+}
+
+activateSelect();
 
 function clearStyle(elements, selector) {
     elements.forEach((element) => {
@@ -69,26 +97,26 @@ function setStyle(element, selector) {
     element.classList.add(selector);
 }
 
-setStyle(highwayButton, 'bikes__button_active');
+function toggleButtonStyles() {
+  clearStyle(surfaceButtons, 'bikes__button_active');
+  const activeSurface = document.querySelector('.surface_position_active').getAttribute('id').split('-')[1];
+  const activeButton = document.querySelector(`#button-${activeSurface}`);
+  setStyle(activeButton, 'bikes__button_active');
+}
 
-surfaceButtons.forEach((button) =>
-{ button.addEventListener('mousedown', () => {
-    clearStyle(surfaceButtons, 'bikes__button_active');
-    setStyle(button, 'bikes__button_active');
-})
-})
+toggleButtonStyles();
 
 const body = document.querySelector('.body');
 const subtitles = Array.from(document.querySelectorAll('.section__subtitle'));
 const quoteAuthor = document.querySelector('.intro__author-profession');
 const arrowButtons = Array.from(document.querySelectorAll('.surfaces__button'));
 const bikesButtons = Array.from(document.querySelectorAll('.bikes__button'));
-const bikesActiveButton = document.querySelector('.bikes__active-button');
 const copyright = document.querySelector('.footer__copyright');
 const themeLogos = Array.from(document.querySelectorAll('.theme-toggle__logo'));
 const themeButtonLabels = Array.from(document.querySelectorAll('.theme-toggle__button-label'));
 const emailInput = document.querySelector('.footer__email-input');
 const links = Array.from(document.querySelectorAll('.link'));
+const sections = Array.from(document.querySelectorAll('.section'));
 
 const themeElements = new Map ([
   [body, 'body_theme'],
@@ -100,7 +128,8 @@ const themeElements = new Map ([
   [themeLogos, 'theme-toggle__logo_theme'],
   [themeButtonLabels, 'theme-toggle__button-label_theme'],
   [emailInput, 'footer__email-input_theme'],
-  [links, 'link_theme_']
+  [links, 'link_theme'],
+  [sections, 'section_theme']
 
 ])
 
@@ -148,6 +177,35 @@ const currentValidationObject = {
 const formValidator = new FormValidator(form, currentValidationObject);
 formValidator.enableValidation();
 
+const bikeContainers = Array.from(document.querySelectorAll('.bikes__group-container'));
 
+function toggleBikeContainer() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= tabletWidth) {
+    bikeContainers.forEach((container) => {
+      const bikes = container.querySelectorAll('.bikes__bike-container');
+      bikes.forEach((bike, index) => 
+        {if (index > 0) {
+          bike.classList.add('bikes__bike-container_hidden')
+        }}
+      )
+    })
+  }
+  else {
+    bikeContainers.forEach((container) => {
+      const bikes = container.querySelectorAll('.bikes__bike-container');
+      bikes.forEach((bike, index) => 
+        {if (index > 0) {
+          bike.classList.remove('bikes__bike-container_hidden')
+        }}
+      )
+    })
+  }
+}
 
+toggleBikeContainer();
 
+window.addEventListener('resize', () => {
+    toggleBikeContainer();
+    activateSelect();
+});

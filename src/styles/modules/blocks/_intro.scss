@@ -4,6 +4,24 @@
     column-gap: 80px;
     padding: 120px 0 60px;
 
+    @include laptop {
+        grid-template-columns: 1fr;
+        padding: 20px 0 80px;
+    }
+
+    &__image {
+       @include laptop {
+            justify-self: center;
+            aspect-ratio: 71 / 51;
+            width: 100%;
+       }
+
+       @include tablet {
+        aspect-ratio: 71 / 51;
+        width: 100%;
+   }
+    }
+
     &__quote {
         display: flex;
         flex-direction: column;
@@ -17,6 +35,21 @@
         line-height: 44px;
         letter-spacing: -0.5px;
         max-width: 470px;
+
+        @include laptop {
+            padding: 40px 0;
+            max-width: 100%;
+        }
+
+        @include tablet {
+            font-size: 27px;
+            line-height: 34px;
+        }
+
+        @include phone {
+            font-size: 23px;
+            line-height: 29px;
+        }
     }
 
     &__author-name {
@@ -25,6 +58,16 @@
         font-size: 20px;
         line-height: 32px;
         padding-bottom: 6px;
+
+        @include tablet {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        @include phone {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 
     &__author-profession {
@@ -34,6 +77,16 @@
         line-height: 28px;
         opacity: 0.7;
         padding-bottom: 5px;
+
+        @include tablet {
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        @include phone {
+            font-size: 10px;
+            line-height: 16px;
+        }
         &_theme {
             &_light {
                 color: $lightThemeColorPale;

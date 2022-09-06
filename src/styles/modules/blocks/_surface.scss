@@ -4,6 +4,12 @@
                          "subtitle"
                          "image";
 
+    @include laptop {
+        grid-template-areas: "title"
+                              "image"
+                              "subtitle";
+    }
+
     &_position {
         &_active {
             display: grid;
@@ -13,6 +19,10 @@
         &_next {
             display: grid;
             grid-area: next;
+
+            @include laptop {
+                display: none;
+            }
         }
     }
 
@@ -31,12 +41,21 @@
         position: relative;
         margin-top: 83px;
         overflow: hidden;
+
+        @include laptop {
+            margin-top: 40px;
+        }
     }
 
     &__image {
         display: block;
         width: 650px;
         aspect-ratio: 13 / 8;
+
+        @include laptop {
+            width: 100%;
+            aspect-ratio: 1.62 / 1;
+        }
     }
 
     &__scheme-container {

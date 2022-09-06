@@ -6,11 +6,22 @@
     &__image {
         display: block;
         width: 100%;
-        width: 340px;
+        max-width: 380px;
+        box-sizing: border-box;
         background-color: $lightThemeBackgroundColor;
         border: 20px solid $lightThemeBackgroundColor;
+        border-radius: 20px;
         aspect-ratio: 1 / 1;
         box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
+
+        @include laptop {
+            max-width: 329px;
+        }
+
+        @include tablet {
+            max-width: 100%;
+            border-width: 15px;
+        }
     }
 
     &__name {
@@ -19,5 +30,12 @@
         line-height: 22px;
         padding-top: 18px;
         padding-left: 5px;
+        text-align: center;
+
+        @include tablet {
+            padding: 0;
+            margin-top: -34px;
+            margin-bottom: 34px;
+        }
     }
 }

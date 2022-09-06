@@ -1,6 +1,11 @@
 .surfaces {
     padding: 62px 0 60px;
     overflow: hidden;
+    position: relative;
+
+    @include laptop {
+        padding: 40px 0 80px;
+    }
 
     &__slider-wrapper {
         display: grid;
@@ -8,10 +13,22 @@
         grid-template-columns: auto 1fr;
         align-items: end;
         gap: 40px;
+
+        @include laptop {
+            grid-template-areas: 'active';
+            grid-template-columns: 1fr;
+        }
     }
 
     &__buttons-container {
         padding-top: 50px;
+
+        @include laptop {
+            position: absolute;
+            padding-top: 0;
+            top: 47px;
+            right: 0;
+        }
     }
 
     &__button {

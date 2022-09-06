@@ -2,19 +2,39 @@
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 2fr;
     column-gap: 105px;
-    background-image: url($imgPath + 'lead-background.jpg');
-    background-position: right bottom;
-    background-repeat: no-repeat;
     position: relative;
-    padding: 83px 0 79px;
+    padding-top: 83px;
     margin-top: 74px;
-    grid-template-areas: "title bike-image"
-                         "subtitle bike-image"
-                         "button bike-image"
-                         "bike-name bike-image";
+    grid-template-areas: "title images"
+                         "subtitle images"
+                         "button images"
+                         "bike-name images";
+
+    @include desktopWide {
+        column-gap: 55px;
+    }
+
+    @include desktop {
+        grid-template-areas: "title title"
+        "subtitle images"
+        "button images"
+        "bike-name images";
+        padding-top: 20px;
+        column-gap: 35px;
+    }
+
+    @include laptop {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+        "images"
+        "subtitle"
+        "button";
+        padding-bottom: 80px;
+    }
 
     &__title {
         grid-area: title;
+        max-width: max-content;
     }
 
     &__subtitle {
@@ -33,11 +53,12 @@
         text-decoration: none;
         border-radius: 4px;
         grid-area: button;
-        min-width: 160px;
+        min-width: 180px;
         width: min-content;
         height: min-content;
         text-align: center;
         position: relative;
+        box-sizing: border-box;
         z-index: 1;
 
         &::after {
@@ -56,18 +77,31 @@
         &:hover::after {
             width: 100%;
         }
+
+        @include laptop {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        @include phone {
+            font-size: 13px;
+            line-height: 19px;
+            padding-top: 14px;
+            padding-bottom: 13px;
+        }
     }
 
     &__bike-name {
         display: block;
         position: relative;
         width: min-content;
+        height: min-content;
         white-space: nowrap;
         font-weight: 400;
         font-size: 18px;
         line-height: 18px;
         grid-area: bike-name;
-        margin: 169px 0 128px;
+        margin: 169px 0 209px;
         &::after {
             display: block;
             position: absolute;
@@ -78,6 +112,42 @@
             height: 2px;
             background-color: #D7D4D4;
         }
+
+        @include laptop {
+            display: none;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: space-between;
+        grid-area: images;
+        margin-top: -60px;
+
+        @include desktop {
+            margin-top: 0;
+        }
+
+        @include laptop {
+            margin-top: 40px;
+        }
+    }
+
+    &__background-image {
+        aspect-ratio: 305 / 418;
+        max-width: 610px;
+        width: 100%;
+        object-fit: cover;
+        box-sizing: border-box;
+
+        @include tablet {
+            aspect-ratio: 127 / 174;
+            max-width: 410px;
+        }
+
+        @include phone {
+            padding-left: 30px;
+        }
     }
 
     &__bike-image {
@@ -85,11 +155,29 @@
         top: 420px;
         width: 340px;
         height: 260px;
+        margin-right: -250px;
+        margin-bottom: 79px;
         object-fit: cover;
         padding: 20px 50px;
         border-radius: 20px;
-        grid-area: bike-image;
         box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
         background-color: #f4f4f4;
+
+        @include desktopWide {
+            margin-right: -370px;
+        }
+
+        @include tablet {
+            margin-right: -250px;
+            width: 260px;
+            height: 199px;
+            padding: 10.67px 26.59px;
+        }
+
+        @include phone {
+            width: 180.82px;
+            height: 138.67px;
+            padding: 10.67px 26.59px;
+        }
     }
 }

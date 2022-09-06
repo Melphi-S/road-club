@@ -5,6 +5,20 @@
     padding: 60px 120px 60px 0;
     align-items: end;
 
+    @include desktop {
+        padding-right: 40px;
+    }
+
+    @include laptop {
+        padding: 40px 0 80px;
+    }
+
+    @include phone {
+        grid-template-areas: 'title'
+                             'buttons'
+                             'bikes';
+    }
+
     &__title {
         grid-area: title;
     }
@@ -16,6 +30,10 @@
         padding-bottom: 5px;
         grid-area: buttons;
         gap: 40px;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__button {
@@ -55,19 +73,97 @@
     &__container {
         grid-area: bikes;
         margin-top: 120px;
+
+        @include laptop {
+            margin-top: 40px;
+        }
+
+        @include phone {
+            margin-top: 15px;
+        }
     }
 
     &__group-container {
         display: none;
         &_active {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
     }
 
     &__group {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 30px;
+        flex-wrap: nowrap;
+        column-gap: 30px;
+
+        @include laptop {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 40px;
+        }
+    }
+
+    &__bike-container {
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__select {
+        display: none;
+        margin-top: 40px;
+        padding: 8px 0 8px 12px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        border: 1px solid #e3e3e3;
+        background: transparent;
+        color: inherit;
+        width: 114px;
+
+        @include tablet {
+            display: block;
+            grid-area: buttons;
+            justify-self: end;
+        }
+
+        @include phone {
+            font-size: 11px;
+            line-height: 14px;
+        }
+    }
+
+    &__toggle-container {
+        display: none;
+        margin-top: 20px;
+        width: min-content;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            grid-area: toggle;
+            column-gap: 5px;
+            justify-self: center;
+        }
+    }
+
+    &__toggle {
+        padding: 0;
+        border: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        background-color: #cacaca;
+
+        &_active {
+            background-color: $lightThemeColor;
+        }
+
+        @include phone {
+            width: 4px;
+            height: 4px;
+        }
     }
 }
