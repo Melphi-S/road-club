@@ -1,6 +1,19 @@
 .footer {
     padding: 82px 120px 60px 0;
 
+    @include desktop {
+        padding-right: 40px;
+    }
+
+    @include laptop {
+        padding-right: 0;
+        padding-top: 60px;
+    }
+
+    @include tablet {
+        padding-bottom: 18px;
+    }
+
     &__email-form {
         display: flex;
         flex-direction: column;
@@ -27,6 +40,11 @@
         margin-top: 50px;
         box-sizing: border-box;
         color: inherit;
+
+        @include tablet {
+            width: 284px;
+            margin-top: 40px;
+        }
 
         &_theme {
             &_light {
@@ -107,5 +125,15 @@
 
     &__logo {
         display: none;
+        width: 38px;
+        height: 38px;
+        background-color: transparent;
+        background-image: url($imgPath + 'gear-logo.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include phone {
+            display: block;
+        }
     }
 }

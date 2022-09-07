@@ -32,6 +32,11 @@
         padding-bottom: 80px;
     }
 
+    @include tablet {
+        padding-top: 40px;
+    }
+
+
     &__title {
         grid-area: title;
         max-width: max-content;
@@ -141,7 +146,7 @@
         box-sizing: border-box;
 
         @include tablet {
-            aspect-ratio: 127 / 174;
+            aspect-ratio: 71 / 87;
             max-width: 410px;
         }
 

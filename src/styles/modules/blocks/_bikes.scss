@@ -13,10 +13,15 @@
         padding: 40px 0 80px;
     }
 
+    @include tablet {
+        padding-bottom: 40px;
+    }
+
     @include phone {
         grid-template-areas: 'title'
                              'buttons'
                              'bikes';
+        padding-bottom: 80px;
     }
 
     &__title {
@@ -107,8 +112,15 @@
     }
 
     &__bike-container {
-        &_hidden {
+
+        @include tablet {
             display: none;
+        }
+
+        &_active {
+            @include tablet {
+                display: block;
+            }
         }
     }
 
@@ -133,6 +145,20 @@
         @include phone {
             font-size: 11px;
             line-height: 14px;
+            justify-self: start;
+        }
+    }
+
+    &__option {
+        color: inherit;
+        &_theme {
+            &_light {
+                background-color: $lightThemeBackgroundColor;
+            }
+            &_dark {
+                background-color: $darkThemeBackgroundColor;
+            }
+        
         }
     }
 

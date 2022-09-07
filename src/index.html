@@ -23,6 +23,11 @@
                     </li>
                 </ul>
             </nav>
+            <button type="button" class="burger-button">
+				<span class="burger-button__line-element burger-button__line-element_theme_light"></span>
+				<span class="burger-button__line-element burger-button__line-element_theme_light"></span>
+                <span class="burger-button__line-element burger-button__line-element_theme_light"></span>
+            </button>
         </header>
         <main class="main">
             <section class="lead">
@@ -91,14 +96,14 @@
                     <button class="bikes__button bikes__button_theme_light" id="button-tt">ТТ</button>
                 </div>
                     <select class="bikes__select" name="bikes-select">
-                        <option value="highway">Шоссе</option>
-                        <option value="gravel">Грэвел</option>
-                        <option value="tt">ТТ</option>
+                        <option value="highway" class="bikes__option bikes__option_theme_light" name="highway">Шоссе</option>
+                        <option value="gravel" class="bikes__option bikes__option_theme_light" name="gravel">Грэвел</option>
+                        <option value="tt" class="bikes__option bikes__option_theme_light" name="tt">ТТ</option>
                     </select>
                 <ul class="bikes__container list" id="bike-group">
                     <li class="bikes__group-container" id="bike-group-highway">
-                        <ul class="bikes__group list">
-                            <li class="bikes__bike-container">
+                        <ul class="bikes__group list" id="bike-type">
+                            <li class="bikes__bike-container" id="bike-group-highway-1">
                                 <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Cervelo Caledonia-5.png" alt="Велосипед Cervelo Caledonia-5." class="bike__image">
@@ -106,7 +111,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-highway-2">
                                 <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Cannondale Systemsix Himod.png" alt="Велосипед Cannondale Systemsix Himod." class="bike__image">
@@ -114,7 +119,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-highway-3">
                                 <a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Trek Domane SL-7.png" alt="Велосипед Trek Domane SL-7." class="bike__image">
@@ -123,15 +128,15 @@
                                 </a>
                             </li>
                         </ul>  
-                        <div class="bikes__toggle-container">
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
+                        <div class="bikes__toggle-container" id="buttons-highway">
+                            <button type="button" class="bikes__toggle" id="button-group-highway-1"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-highway-2"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-highway-3"></button>
                         </div>
                     </li>
                     <li class="bikes__group-container" id="bike-group-gravel">
                         <ul class="bikes__group list">
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-gravel-1">
                                 <a href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Cervelo Aspero GRX 810.png" alt="Cervelo Aspero GRX 810." class="bike__image">
@@ -139,7 +144,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-gravel-2">
                                 <a href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Specialized S-Works Diverge.png" alt="Specialized S-Works Diverge." class="bike__image">
@@ -147,7 +152,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-gravel-3">
                                 <a href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Cannondale Topstone Lefty 3.png" alt="Cannondale Topstone Lefty 3." class="bike__image">
@@ -156,15 +161,15 @@
                                 </a>
                             </li>
                         </ul>  
-                        <div class="bikes__toggle-container">
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
+                        <div class="bikes__toggle-container" id="buttons-gravel">
+                            <button type="button" class="bikes__toggle" id="button-group-gravel-1"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-gravel-2"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-gravel-3"></button>
                         </div>
                     </li>
                     <li class="bikes__group-container" id="bike-group-tt">
                         <ul class="bikes__group list">
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-tt-1">
                                 <a href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Specialized S-Works Shiv.png" alt="Specialized S-Works Shiv." class="bike__image">
@@ -172,7 +177,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-tt-2">
                                 <a href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/BMC Timemachine 01 ONE.png" alt="BMC Timemachine 01 ONE." class="bike__image">
@@ -180,7 +185,7 @@
                                     </figure> 
                                 </a>
                             </li>
-                            <li class="bikes__bike-container">
+                            <li class="bikes__bike-container" id="bike-group-tt-3">
                                 <a href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q" target="_blank" class="link">
                                     <figure class="bike">
                                         <img src="./vendors/images/bikes/Cervelo P-Series.png" alt="Cervelo P-Series." class="bike__image">
@@ -189,20 +194,15 @@
                                 </a>
                             </li>
                         </ul>  
-                        <div class="bikes__toggle-container">
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
-                            <button type="button" class="bikes__toggle"></button>
+                        <div class="bikes__toggle-container" id="buttons-tt">
+                            <button type="button" class="bikes__toggle" id="button-group-tt-1"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-tt-2"></button>
+                            <button type="button" class="bikes__toggle" id="button-group-tt-3"></button>
                         </div>
                     </li>
                 </ul>
-                <!-- <div class="bikes__toggle-container">
-                    <button type="button" class="bikes__toggle"></button>
-                    <button type="button" class="bikes__toggle"></button>
-                    <button type="button" class="bikes__toggle"></button>
-                </div> -->
             </section>
-            <!-- <section class="workouts section section_theme_light" id="workouts">
+            <section class="workouts section section_theme_light" id="workouts">
                 <h2 class="workouts__title section__title">Тренировки</h2>
                 <p class="workouts__subtitle section__subtitle section__subtitle_theme_light">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
                 <div class="workouts__apps">
@@ -210,7 +210,7 @@
                     <a href="https://www.komoot.com" target="_blank" class="workouts__app-link link link_theme_light">Komoot</a>
                 </div>
                 <img src="./vendors/images/workouts.jpg" alt="Поворот на узком шоссе." class="workouts__image">
-            </section> -->
+            </section>
         </main>
         <footer class="footer">
             <form class="footer__email-form">
@@ -221,7 +221,7 @@
             <div class="footer__bottom-line">
                 <p class="footer__copyright footer__copyright_theme_light">&copy;&nbsp;Road Club 2021</p>
                 <div class="footer__toggle-container">
-                    <div class="theme-toggle">
+                    <div class="theme-toggle theme-toggle_place_footer">
                         <span class="theme-toggle__logo theme-toggle__logo_theme_light"></span>
                         <input class="theme-toggle__button" id="theme-toggle" type="checkbox"/>
                         <label class="theme-toggle__button-label theme-toggle__button-label_theme_light" for="theme-toggle"></label>
@@ -231,6 +231,27 @@
                 </div>
             </div>
         </footer>
+        <div class="burger-menu">
+            <nav>
+                <ul class="burger-menu__menu list">
+                    <li>
+                        <a href="#surfaces" class="burger-menu__menu-item link link_theme_light">Покрытия и градиенты</a>
+                    </li>
+                    <li>
+                        <a href="#bikes" class="burger-menu__menu-item link link_theme_light">Велосипеды</a>                        
+                    </li>
+                    <li>
+                        <a href="#workouts" class="burger-menu__menu-item link link_theme_light">Тренировки</a>        
+                    </li>
+                </ul>
+            </nav>
+            <div class="theme-toggle theme-toggle_place_burger">
+                <span class="theme-toggle__logo theme-toggle__logo_theme_light"></span>
+                <input class="theme-toggle__button" id="theme-toggle" type="checkbox"/>
+                <label class="theme-toggle__button-label theme-toggle__button-label_theme_light" for="theme-toggle"></label>
+                <span class="theme-toggle__logo theme-toggle__logo_theme_light"></span>
+            </div>
+        </div>
     </div>
     <script type="module" src="./pages/index.js"></script>
 </body>

@@ -6,7 +6,23 @@
     grid-template-rows: min-content min-content 1fr;
     column-gap: 160px;
     padding: 150px 120px 120px 0;
-    
+
+    @include desktopWide {
+        column-gap: 30px;
+    }
+
+    @include desktop {
+        padding-right: 40px;
+    }
+
+    @include laptop {
+        grid-template-areas: "title"
+                             "image"
+                             "subtitle"
+                             "apps";
+        padding: 40px 0 60px;
+    }
+
     &__title {
         grid-area: title;
     }
@@ -19,6 +35,10 @@
         display: flex;
         gap: 30px;
         grid-area: apps;
+
+        @include laptop {
+            padding-top: 40px;
+        }
     }
 
     &__app-link {
@@ -26,9 +46,26 @@
         font-size: 18px;
         line-height: 28px;
         align-self: end;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include phone {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__image {
         grid-area: image;
+        justify-self: end;
+        width: 100%;
+        aspect-ratio: 29 / 23;
+
+        @include laptop {
+            padding-top: 40px;
+        }
     }
 }

@@ -2,8 +2,16 @@
     display: flex;
     align-items: center;
 
-    &_disabled {
-        display: none;
+    &_place {
+        &_footer {
+            @include phone {
+                display: none;
+            }
+        }
+
+        &_burger {
+
+        }
     }
 
     &__logo {

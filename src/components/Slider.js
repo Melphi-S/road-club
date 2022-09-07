@@ -1,8 +1,8 @@
 class Slider {
     constructor(sliderId, slidesSelector, visibleSlidesOptions, togglingElementsSelectors = null) {
         this._sliderId = sliderId;
-        this._slider = document.querySelector(sliderId);
-        this._slides = Array.from(this._slider.querySelectorAll(slidesSelector));
+        this.slider = document.querySelector(sliderId);
+        this._slides = Array.from(this.slider.querySelectorAll(slidesSelector));
         this._visibleSlidesOptions = visibleSlidesOptions;
         this._togglingElementsSelectors = togglingElementsSelectors;
         this._visibleSlides = {};
@@ -77,6 +77,21 @@ class Slider {
         }
     }
 
+    _moveToPoint(direction) {
+        let index = this._slides.indexOf(this.slider.querySelector(`${this._sliderId}-${direction}`));
+        let nextCircleIndex = 0;
+        for (let slide in this._visibleSlides){
+            this._visibleSlides[slide] = this._slides[index];
+            if (index < this._slides.length - 1) {
+                index += 1;
+            }
+            else {
+                index = nextCircleIndex;
+                nextCircleIndex += 1;
+            }
+        }
+    }
+
     _setVisibleSlides(direction) {
         if (direction === "next") {
             this._moveForward()
@@ -87,18 +102,7 @@ class Slider {
         }
     
         else {
-            let index = this._slides.indexOf(this._slider.querySelector(`${this._sliderId}-${direction}`));
-            let nextCircleIndex = 0;
-            for (let slide in this._visibleSlides){
-                this._visibleSlides[slide] = this._slides[index];
-                if (index < this._slides.length - 1) {
-                    index += 1;
-                }
-                else {
-                    index = nextCircleIndex;
-                    nextCircleIndex += 1;
-                }
-            }
+            this._moveToPoint(direction);
         }
     }
 

@@ -34,6 +34,18 @@
     &__subtitle {
         display: none;
         grid-area: subtitle;
+
+        @include laptop {
+            min-height: 84px;
+        }
+
+        @include tablet {
+            min-height: 80px;
+        }
+
+        @include phone {
+            min-height: 90px;
+        }
     }
 
     &__image-container {
@@ -68,11 +80,24 @@
         height: 40px;
         background-image: url($imgPath + 'scheme-container.png');
         background-repeat: no-repeat;
+        background-size: contain;
         z-index: 1;
+
+        @include phone {
+            width: 70px;
+            height: 28px;
+            bottom: 14px;
+        }
     }
 
     &__scheme {
         padding-left: 16px;
         padding-bottom: 12px;
+
+        @include phone {
+            width: 35px;
+            padding-left: 11px;
+            padding-bottom: 8px;
+        }
     }
 }

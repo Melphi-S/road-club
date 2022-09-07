@@ -3,6 +3,12 @@
     padding: 0;
     cursor: pointer;
 
+    @include phone {
+        background-color: $lightThemeBackgroundColor;
+        box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
+        border-radius: 20px;
+    }
+
     &__image {
         display: block;
         width: 100%;
@@ -15,12 +21,17 @@
         box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
 
         @include laptop {
-            max-width: 329px;
+            max-width: 320px;
         }
 
         @include tablet {
-            max-width: 100%;
+            max-width: 370px;
             border-width: 15px;
+        }
+
+        @include phone {
+            box-shadow: none;
+            // border-bottom: none;
         }
     }
 
@@ -33,9 +44,14 @@
         text-align: center;
 
         @include tablet {
-            padding: 0;
-            margin-top: -34px;
-            margin-bottom: 34px;
+            padding: 0;          
+        }
+
+        @include phone {
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: -12px;
+            padding-bottom: 16px;
         }
     }
 }
