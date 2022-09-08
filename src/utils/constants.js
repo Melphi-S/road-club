@@ -56,6 +56,7 @@ const headerBurgerOptions = {
   burgerButtonSelector: '.burger-button',
   burgerButtonElementSelector: '.burger-button__line-element',
   burgerButtonActiveElementClass: 'burger-button__line-element_active',
+  clickableClasses: ['link'],
   maxValidWidth: mobileWidth
 }
 

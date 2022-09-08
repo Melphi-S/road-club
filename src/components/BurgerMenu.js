@@ -37,23 +37,21 @@ class BurgerMenu {
 		}
 	};
 
-	// _handlePressClick = (evt) => {
-	// 	if (!evt.target.classList.contains("popup_opened") &&
-	// 		!evt.target.classList.contains("logo_type_header-animals") &&
-	// 		!evt.target.classList.contains('burger-button') &&
-	// 		!evt.target.classList.contains('burger-button__line-element')
-	// 	) {
-	// 		setTimeout(() => {this.close()}, 100);
-	// 	}
-	// };
+	_handlePressClick = (evt) => {
+		this._options.clickableClasses.forEach((element) => {
+			if (evt.target.classList.contains(element)) {
+				setTimeout(() => {this.close()}, 100);
+			}
+		})
+	};
 
 	_setEventListeners() {
-		// document.addEventListener("mousedown", this._handlePressClick);
+		this._burger.addEventListener("mousedown", this._handlePressClick);
 		document.addEventListener("keydown", this._handlePressEsc);
 	}
 
 	_removeEventListeners() {
-		// document.removeEventListener("mousedown", this._handlePressClick);
+		this._burger.removeEventListener("mousedown", this._handlePressClick);
 		document.removeEventListener("keydown", this._handlePressEsc);
 	}
 

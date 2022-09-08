@@ -4,6 +4,7 @@ import { BurgerMenu } from "../components/BurgerMenu.js";
 import { toggleButtonStyles } from "../components/buttonStyles.js";
 import { toggleTheme } from "../components/themeToggle.js";
 import { changeOption, activateSelect, activateBikeToggles, activateBikeSliders } from "../components/tabletLayout.js";
+import { scrollToAnchor } from "../utils/anchorLinkScroll.js";
 import { sliderButtons, surfaceButtons, themeToggleButtons, form, currentValidationObject, currentThemeElements, headerBurgerOptions, burgerButton } from "../utils/constants.js";
 
 const surfacesSlider = new Slider(
@@ -70,7 +71,6 @@ toggleButtonStyles(surfaceButtons,'bikes__button_active', '.surface_position_act
 
 themeToggleButtons.forEach((button) => {
   button.addEventListener('change', () => {
-    console.log(themeToggleButtons);
     toggleTheme(currentThemeElements);
     if (document.body.classList.contains('body_theme_dark')) {
       themeToggleButtons.forEach((button) => {
@@ -98,3 +98,6 @@ window.addEventListener('resize', () => {
     activateSelect(sliderButtons.selectBikes, [surfacesSlider, bikesGroupSlider]);
     headerBurgerMenu.handleScreenWidth();
 });
+
+document.querySelectorAll('a[href^="#"').forEach( (link) => scrollToAnchor(link, '.header'));
+

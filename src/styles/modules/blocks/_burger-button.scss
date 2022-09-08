@@ -17,7 +17,6 @@
         display: block;
         width: 22px;
         height: 3px;
-        background-color: $lightThemeColor;
         transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
 
         &_theme {
@@ -37,6 +36,22 @@
         }
         &:nth-child(3) {
             bottom: 0;
+        }
+
+        &_active {
+            &:nth-child(1) {
+                top: 8px;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+            
+            &:nth-child(3) {
+                bottom: 8px;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
