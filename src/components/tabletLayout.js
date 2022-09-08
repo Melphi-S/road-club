@@ -61,5 +61,4 @@ function adjustToggles(sliderInstance) {
   })
 }
 
-
 export { changeOption, activateSelect, activateBikeToggles, activateBikeSliders }

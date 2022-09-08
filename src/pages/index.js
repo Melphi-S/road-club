@@ -1,3 +1,5 @@
+import '../styles/style.css'
+
 import { Slider } from "../components/Slider.js";
 import { FormValidator } from "../components/FormValidator.js";
 import { BurgerMenu } from "../components/BurgerMenu.js";
@@ -100,4 +102,3 @@ window.addEventListener('resize', () => {
 });
 
 document.querySelectorAll('a[href^="#"').forEach( (link) => scrollToAnchor(link, '.header'));
-
