@@ -1,6 +1,6 @@
 # Проект: RoadClub
 
-(https://melphi-s.github.io/road-club/)
+[GitHub Pages](https://melphi-s.github.io/road-club/)
 
 Сайт-лендинг в рамках учебного проекта Яндекс.Практикум
 
