@@ -1,0 +1,56 @@
+.bike {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    @include phone {
+        background-color: $lightThemeBackgroundColor;
+        box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
+        border-radius: 20px;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+        box-sizing: border-box;
+        background-color: $lightThemeBackgroundColor;
+        border: 20px solid $lightThemeBackgroundColor;
+        border-radius: 20px;
+        aspect-ratio: 1 / 1;
+        box-shadow: -20px 60px 120px rgba(0, 0, 0, 0.44);
+
+        @include laptop {
+            max-width: 320px;
+        }
+
+        @include tablet {
+            max-width: 370px;
+            border-width: 15px;
+        }
+
+        @include phone {
+            box-shadow: none;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 18px;
+        padding-left: 5px;
+        text-align: center;
+
+        @include tablet {
+            padding: 0;          
+        }
+
+        @include phone {
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: -12px;
+            padding-bottom: 16px;
+        }
+    }
+}

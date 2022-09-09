@@ -1,0 +1,103 @@
+.surface {
+    display: none;
+    grid-template-areas: "title"
+                         "subtitle"
+                         "image";
+
+    @include laptop {
+        grid-template-areas: "title"
+                              "image"
+                              "subtitle";
+    }
+
+    &_position {
+        &_active {
+            display: grid;
+            grid-area: active;
+        }
+
+        &_next {
+            display: grid;
+            grid-area: next;
+
+            @include laptop {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        display: none;
+        grid-area: title;
+    }
+
+    &__subtitle {
+        display: none;
+        grid-area: subtitle;
+
+        @include laptop {
+            min-height: 84px;
+        }
+
+        @include tablet {
+            min-height: 80px;
+        }
+
+        @include phone {
+            min-height: 90px;
+        }
+    }
+
+    &__image-container {
+        grid-area: image;
+        position: relative;
+        margin-top: 83px;
+        overflow: hidden;
+
+        @include laptop {
+            margin-top: 40px;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 650px;
+        aspect-ratio: 13 / 8;
+
+        @include laptop {
+            width: 100%;
+            aspect-ratio: 1.62 / 1;
+        }
+    }
+
+    &__scheme-container {
+        display: none;
+        align-items: flex-end;
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        width: 100px;
+        height: 40px;
+        background-image: url($imgPath + 'scheme-container.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+
+        @include phone {
+            width: 70px;
+            height: 28px;
+            bottom: 14px;
+        }
+    }
+
+    &__scheme {
+        padding-left: 16px;
+        padding-bottom: 12px;
+
+        @include phone {
+            width: 35px;
+            padding-left: 11px;
+            padding-bottom: 8px;
+        }
+    }
+}

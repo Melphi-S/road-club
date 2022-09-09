@@ -4,5 +4,23 @@
     width: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    padding-left: 120px;
     box-sizing: border-box;
+    background-color: inherit;
+
+    @include desktop {
+        padding-left: 40px;
+    }
+
+    @include laptop {
+        padding-right: 40px;
+    }
+
+    @include tablet {
+        padding: 0 25px;
+    }
+
+    @include phone {
+        padding: 0 18px;
+    }
 }

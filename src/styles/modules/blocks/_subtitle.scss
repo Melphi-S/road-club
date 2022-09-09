@@ -1,0 +1,33 @@
+.subtitle {
+    margin: 0;
+    padding-top: 45px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: $paleOpacity;
+    max-width: $textWidthLimit;
+
+    @include laptop {
+        max-width: 100%;
+        padding-top: 40px;
+    }
+
+    @include tablet {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    @include phone {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    &_theme {
+        &_light {
+            color: $lightThemeColorPale;
+        }
+        &_dark {
+            color: $darkThemeColorPale;
+        }
+    }
+}

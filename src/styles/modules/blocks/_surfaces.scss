@@ -1,0 +1,78 @@
+.surfaces {
+    padding: 62px 0 60px;
+    overflow: hidden;
+    position: relative;
+
+    @include laptop {
+        padding: 40px 0 80px;
+    }
+
+    &__slider-wrapper {
+        display: grid;
+        grid-template-areas: 'active next';
+        grid-template-columns: auto 1fr;
+        align-items: end;
+        gap: 40px;
+
+        @include laptop {
+            grid-template-areas: 'active';
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__buttons-container {
+        padding-top: 50px;
+
+        @include laptop {
+            position: absolute;
+            padding-top: 0;
+            top: 47px;
+            right: 0;
+        }
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+        @include phone {
+            width: 24px;
+            height: 24px;
+            background-size: 4.5px 10px;
+        }
+
+        &:hover {
+            opacity: $lightThemeHoverOpacityPale;
+        }
+
+        &_type{
+            &_previous {
+                margin-right: 20px;
+
+                @include phone {
+                    margin-right: 10px;
+                }
+            }
+            &_next {
+                transform: rotate(180deg);
+            }
+        }
+
+        &_theme {
+            &_light {
+                background-color: #ebebeb;
+                background-image: url($imgPath + 'arrow-button.svg');
+            }
+            &_dark {
+                background-color: #434343;
+                background-image: url($imgPath + 'arrow-button-for-dark.svg');
+            }
+        }
+    }
+}

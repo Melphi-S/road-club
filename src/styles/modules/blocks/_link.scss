@@ -1,4 +1,18 @@
 .link {
     text-decoration: none;
     color: inherit;
+
+    &_theme {
+        &_light {
+            &:hover {
+                opacity: $lightThemeHoverOpacity;
+            }
+        }
+        &_dark {
+            &:hover {
+                opacity: $darkThemeHoverOpacity;
+            }
+        }
+    }
+
 }

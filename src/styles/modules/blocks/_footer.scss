@@ -1,0 +1,139 @@
+.footer {
+    padding: 82px 120px 60px 0;
+
+    @include desktop {
+        padding-right: 40px;
+    }
+
+    @include laptop {
+        padding-right: 0;
+        padding-top: 60px;
+    }
+
+    @include tablet {
+        padding-bottom: 18px;
+    }
+
+    &__email-form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: min-content;
+    }
+
+    &__email-label {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 229px;
+
+    }
+
+    &__email-input {
+        width: 360px;
+        height: 50px;
+        padding: 0;
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        border-radius: 4px;
+        padding-left: 20px;
+        padding-right: 40px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        color: inherit;
+
+        @include tablet {
+            width: 284px;
+            margin-top: 40px;
+        }
+
+        &_theme {
+            &_light {
+                background-color: $lightThemeBackgroundColor;
+
+                &::placeholder {
+                    opacity: $paleOpacity;
+                }
+            }
+            &_dark {
+                background-color: $darkThemeBackgroundColor; 
+
+                &::placeholder {
+                    color: #ffffff;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 28px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__email-button {
+        height: min-content;
+        width: min-content;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 28px;
+        position: absolute;
+        bottom: 11px;
+        right: 22px;
+        background: transparent;
+        cursor: pointer;
+        color: inherit;
+        &_inactive {
+            display: none;
+        }        
+    }
+
+    &__bottom-line {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 85px;
+    }
+
+    &__copyright {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+        padding-top: 15px;
+        &_theme {
+            &_light {
+                color: #cfcfcf;
+            }
+            &_dark {
+                color: #565656;
+            }
+        }
+    }
+
+    &__toggle-container {
+
+    }
+
+    &__logo {
+        display: none;
+        width: 38px;
+        height: 38px;
+        background-color: transparent;
+        background-image: url($imgPath + 'gear-logo.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include phone {
+            display: block;
+        }
+    }
+}

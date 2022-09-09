@@ -1,0 +1,83 @@
+.theme-toggle {
+    display: flex;
+    align-items: center;
+
+    &_place {
+        &_footer {
+            @include phone {
+                display: none;
+            }
+        }
+
+        &_burger {
+
+        }
+    }
+
+    &__logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 28px;
+        height: 28px;
+        &:last-of-type {
+            width: 20px;
+            height: 20px;
+        }
+
+        &_theme {
+            &_light {
+                background-image: url($imgPath + 'sun-logo.svg');
+                &:last-of-type {
+                    background-image: url($imgPath + 'moon-logo.svg');
+                }
+            }
+            &_dark {
+                background-image: url($imgPath + 'sun-logo-for-dark.svg');
+                &:last-of-type {
+                    background-image: url($imgPath + 'moon-logo-for-dark.svg');
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: none;
+
+        &:checked + .theme-toggle__button-label:before {
+            left: 22px;
+        }
+    }
+
+    &__button-label {
+        width: 44px;
+        height: 24px;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+        transition: .3s ease;
+        background-color: #ffffff;
+        margin: 0 22px;
+
+        &_theme {
+            &_light {
+                background-color: #ffffff;
+            }
+
+            &_dark {
+                background-color: #545454;
+            }
+        }
+
+        &::before {
+            transition: .3s ease;
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: #24B47E;
+            left: 2px;
+            top: 2px;
+            border-radius: 100px;
+        }      
+    }
+}
