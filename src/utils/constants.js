@@ -18,7 +18,7 @@ const currentValidationObject = {
 }
 
 const body = document.querySelector('.body');
-const subtitles = Array.from(document.querySelectorAll('.section__subtitle'));
+const subtitles = Array.from(document.querySelectorAll('.subtitle'));
 const quoteAuthor = document.querySelector('.intro__author-profession');
 const arrowButtons = Array.from(document.querySelectorAll('.surfaces__button'));
 const bikesButtons = Array.from(document.querySelectorAll('.bikes__button'));
@@ -34,7 +34,7 @@ const lineElements = Array.from(document.querySelectorAll('.burger-button__line-
 const currentThemeElements = new Map ([
   [body, 'body_theme'],
   [quoteAuthor, 'intro__author-profession_theme'],
-  [subtitles, 'section__subtitle_theme'],
+  [subtitles, 'subtitle_theme'],
   [arrowButtons, 'surfaces__button_theme'],
   [bikesButtons, 'bikes__button_theme'],
   [copyright, 'footer__copyright_theme'],

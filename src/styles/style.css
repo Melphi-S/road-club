@@ -117,64 +117,6 @@
     border-top: 1px solid #474747;
   }
 }
-.section__title {
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  margin: 0;
-  max-width: 460px;
-}
-@media screen and (max-width: 992px) {
-  .section__title {
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section__title {
-    font-size: 44px;
-    line-height: 48px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section__title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-}
-.section__subtitle {
-  margin: 0;
-  padding-top: 45px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  opacity: 0.7;
-  max-width: 460px;
-}
-@media screen and (max-width: 992px) {
-  .section__subtitle {
-    max-width: 100%;
-    padding-top: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section__subtitle {
-    font-size: 15px;
-    line-height: 20px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section__subtitle {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-.section__subtitle_theme_light {
-  color: #222222;
-}
-.section__subtitle_theme_dark {
-  color: #e5e5e5;
-}
 
 .lead {
   display: grid;
@@ -415,6 +357,7 @@
   line-height: 44px;
   letter-spacing: -0.5px;
   max-width: 470px;
+  margin: 0;
 }
 @media screen and (max-width: 992px) {
   .intro__quote-text {
@@ -1280,4 +1223,64 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  max-width: 460px;
+}
+@media screen and (max-width: 992px) {
+  .title {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  padding-top: 45px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.7;
+  max-width: 460px;
+}
+@media screen and (max-width: 992px) {
+  .subtitle {
+    max-width: 100%;
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .subtitle {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.subtitle_theme_light {
+  color: #222222;
+}
+.subtitle_theme_dark {
+  color: #e5e5e5;
 }/*# sourceMappingURL=style.css.map */

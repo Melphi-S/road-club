@@ -1,5 +1,5 @@
 .section {
-
+  
     @include laptop {
         &_theme {
             &_light {
@@ -11,60 +11,60 @@
         }
     }
 
-    &__title {
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 60px;
-        letter-spacing: -0.5px;
-        margin: 0;
-        max-width: $textWidthLimit;
+    // &__title {
+    //     font-weight: 700;
+    //     font-size: 55px;
+    //     line-height: 60px;
+    //     letter-spacing: -0.5px;
+    //     margin: 0;
+    //     max-width: $textWidthLimit;
 
-        @include laptop {
-            max-width: 100%;
-        }
+    //     @include laptop {
+    //         max-width: 100%;
+    //     }
 
-        @include tablet {
-            font-size: 44px;
-            line-height: 48px;
-        }
+    //     @include tablet {
+    //         font-size: 44px;
+    //         line-height: 48px;
+    //     }
 
-        @include phone {
-            font-size: 32px;
-            line-height: 40px;
-        }
-    }
+    //     @include phone {
+    //         font-size: 32px;
+    //         line-height: 40px;
+    //     }
+    // }
 
-    &__subtitle {
-        margin: 0;
-        padding-top: 45px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        opacity: $paleOpacity;
-        max-width: $textWidthLimit;
+    // &__subtitle {
+    //     margin: 0;
+    //     padding-top: 45px;
+    //     font-weight: 400;
+    //     font-size: 18px;
+    //     line-height: 28px;
+    //     opacity: $paleOpacity;
+    //     max-width: $textWidthLimit;
 
-        @include laptop {
-            max-width: 100%;
-            padding-top: 40px;
-        }
+    //     @include laptop {
+    //         max-width: 100%;
+    //         padding-top: 40px;
+    //     }
 
-        @include tablet {
-            font-size: 15px;
-            line-height: 20px;
-        }
+    //     @include tablet {
+    //         font-size: 15px;
+    //         line-height: 20px;
+    //     }
 
-        @include phone {
-            font-size: 12px;
-            line-height: 18px;
-        }
+    //     @include phone {
+    //         font-size: 12px;
+    //         line-height: 18px;
+    //     }
 
-        &_theme {
-            &_light {
-                color: $lightThemeColorPale;
-            }
-            &_dark {
-                color: $darkThemeColorPale;
-            }
-        }
-    }
+    //     &_theme {
+    //         &_light {
+    //             color: $lightThemeColorPale;
+    //         }
+    //         &_dark {
+    //             color: $darkThemeColorPale;
+    //         }
+    //     }
+    // }
 }
